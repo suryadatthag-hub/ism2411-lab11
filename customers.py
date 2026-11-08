@@ -25,3 +25,22 @@ print(customer)
 
 del customer["email"]
 print(customer)
+
+# Exercise 3: Safe lookup
+print("\nExercise 3: Safe lookup")
+print(customer.get("email", "no email on file"))
+
+try:
+    print(customer["email"])
+except KeyError as error:
+    print(f"KeyError: {error} - the email field was deleted.")
+
+# Exercise 4: Iterate
+print("\nExercise 4: Iterate")
+for key, value in customer.items():
+    print(f"{key}: {value}")
+
+# .items() gives both the key and value; a plain loop gives only the keys.
+print("Keys from iterating without .items():")
+for key in customer:
+    print(key)
