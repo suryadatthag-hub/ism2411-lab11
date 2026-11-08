@@ -1,3 +1,17 @@
+# Reflection
+# 1. For optional data (customer email, for example), I would use `.get()` because
+# it can give a default if that piece of data is not available. For required data,
+# I would use bracket notation because if that specific key is not there, it should
+# indicate an issue with the data. Basically, if the data being requested is likely
+# to be missing, use `.get()` or if it should be addressed, use bracket notation.
+#
+# 2. Creating a summary as a dictionary makes me think of Excel SUMIF or a
+# PivotTable - organizing data based on a category (region) and adding up the sales
+# in that category. With Python, this could be automatically done across many files,
+# and it could be consistently run every time new data is available. Additionally,
+# Python can also handle bulk data by iterating through many rows without needing
+# every row to be in a worksheet.
+
 # ISM2411 Lab 11 - Customer Dictionary & Lookup
 
 # Exercise 1: One customer
