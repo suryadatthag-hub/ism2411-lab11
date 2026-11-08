@@ -15,7 +15,6 @@
 # ISM2411 Lab 11 - Customer Dictionary & Lookup
 
 # Exercise 1: One customer
-print("Exercise 1: One customer")
 customer = {
     "name": "Alice",
     "email": "alice@example.com",
@@ -30,7 +29,6 @@ print(customer["ytd_spend"])
 print(customer)
 
 # Exercise 2: Update and add
-print("\nExercise 2: Update and add")
 customer["phone"] = "555-0101"
 print(customer)
 
@@ -41,7 +39,6 @@ del customer["email"]
 print(customer)
 
 # Exercise 3: Safe lookup
-print("\nExercise 3: Safe lookup")
 print(customer.get("email", "no email on file"))
 
 try:
@@ -50,17 +47,14 @@ except KeyError as error:
     print(f"KeyError: {error} - the email field was deleted.")
 
 # Exercise 4: Iterate
-print("\nExercise 4: Iterate")
 for key, value in customer.items():
     print(f"{key}: {value}")
 
 # .items() gives both the key and value; a plain loop gives only the keys.
-print("Keys from iterating without .items():")
 for key in customer:
     print(key)
 
 # Exercise 5: Lookup table
-print("\nExercise 5: Lookup table")
 tier_discounts = {
     "bronze": 0,
     "silver": 0.05,
@@ -76,7 +70,6 @@ print(f"Discount: {discount_rate:.0%}")
 print(f"Final price: ${final_price:.2f}")
 
 # Exercise 6: List of dicts
-print("\nExercise 6: List of dicts")
 customers = [
     {"name": "Alice", "tier": "platinum", "ytd_spend": 12400},
     {"name": "Bob", "tier": "silver", "ytd_spend": 3200},
@@ -90,7 +83,6 @@ for person in customers:
     print(f"{person['name']} | {person['tier']} | Discount: ${discount_amount:.2f}")
 
 # Exercise 7: Nested catalog
-print("\nExercise 7: Nested catalog")
 catalog = {
     "Widget A": {"price": 9.99, "stock": 150},
     "Gadget C": {"price": 49.99, "stock": 8},
@@ -101,7 +93,6 @@ for product_name, details in catalog.items():
         print(f"LOW STOCK: {product_name} - only {details['stock']} left")
 
 # Exercise 8: Sales by region
-print("\nExercise 8: Sales by region")
 transactions = [
     {"region": "South", "amount": 300},
     {"region": "North", "amount": 150},
